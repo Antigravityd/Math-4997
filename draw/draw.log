@@ -1,0 +1,1048 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  24 JAN 2023 02:05
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**draw.tex
+(./draw.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/base/size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks15
+\pgfutil@tempdima=\dimen139
+\pgfutil@tempdimb=\dimen140
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box47
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+))
+Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks19
+))
+\pgf@x=\dimen143
+\pgf@y=\dimen144
+\pgf@xa=\dimen145
+\pgf@ya=\dimen146
+\pgf@xb=\dimen147
+\pgf@yb=\dimen148
+\pgf@xc=\dimen149
+\pgf@yc=\dimen150
+\pgf@xd=\dimen151
+\pgf@yd=\dimen152
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count187
+\c@pgf@countb=\count188
+\c@pgf@countc=\count189
+\c@pgf@countd=\count190
+\t@pgf@toka=\toks20
+\t@pgf@tokb=\toks21
+\t@pgf@tokc=\toks22
+\pgf@sys@id@count=\count191
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfsyssoftpath@smallbuffer@items=\count192
+\pgfsyssoftpath@bigbuffer@items=\count193
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen153
+\pgfmath@count=\count194
+\pgfmath@box=\box48
+\pgfmath@toks=\toks23
+\pgfmath@stack@operand=\toks24
+\pgfmath@stack@operation=\toks25
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex)))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count195
+))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@picminx=\dimen154
+\pgf@picmaxx=\dimen155
+\pgf@picminy=\dimen156
+\pgf@picmaxy=\dimen157
+\pgf@pathminx=\dimen158
+\pgf@pathmaxx=\dimen159
+\pgf@pathminy=\dimen160
+\pgf@pathmaxy=\dimen161
+\pgf@xx=\dimen162
+\pgf@xy=\dimen163
+\pgf@yx=\dimen164
+\pgf@yy=\dimen165
+\pgf@zx=\dimen166
+\pgf@zy=\dimen167
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@path@lastx=\dimen168
+\pgf@path@lasty=\dimen169
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@shorten@end@additional=\dimen170
+\pgf@shorten@start@additional=\dimen171
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfpic=\box49
+\pgf@hbox=\box50
+\pgf@layerbox@main=\box51
+\pgf@picture@serial@count=\count196
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgflinewidth=\dimen172
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@pt@x=\dimen173
+\pgf@pt@y=\dimen174
+\pgf@pt@temp=\dimen175
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowsep=\dimen176
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@max=\dimen177
+\pgf@sys@shading@range@num=\count197
+\pgf@shadingcount=\count198
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfexternal@startupbox=\box52
+))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfnodeparttextbox=\box53
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@nodesepstart=\dimen178
+\pgf@nodesepend=\dimen179
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
+))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/pgf/utilities/pgffor.sty
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/pgf/math/pgfmath.sty
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen180
+\pgffor@skip=\dimen181
+\pgffor@stack=\toks26
+\pgffor@toks=\toks27
+))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@plot@mark@count=\count199
+\pgfplotmarksize=\dimen182
+)
+\tikz@lastx=\dimen183
+\tikz@lasty=\dimen184
+\tikz@lastxsaved=\dimen185
+\tikz@lastysaved=\dimen186
+\tikz@lastmovetox=\dimen187
+\tikz@lastmovetoy=\dimen188
+\tikzleveldistance=\dimen189
+\tikzsiblingdistance=\dimen190
+\tikz@figbox=\box54
+\tikz@figbox@bg=\box55
+\tikz@tempbox=\box56
+\tikz@tempbox@bg=\box57
+\tikztreelevel=\count266
+\tikznumberofchildren=\count267
+\tikznumberofcurrentchild=\count268
+\tikz@fig@count=\count269
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmatrixcurrentrow=\count270
+\pgfmatrixcurrentcolumn=\count271
+\pgf@matrix@numberofcolumns=\count272
+)
+\tikz@expandcount=\count273
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymath.code.tex
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
+\tikz@math@for@depth=\count274
+\tikz@math@dimen=\dimen191
+\tikz@math@toks=\toks28
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count275
+\l__pdf_internal_box=\box58
+) (./draw.aux)
+\openout1 = `draw.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count276
+\scratchdimen=\dimen192
+\scratchbox=\box59
+\nofMPsegments=\count277
+\nofMParguments=\count278
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count279
+\MPscratchDim=\dimen193
+\MPnumerator=\count280
+\makeMPintoPDFobject=\count281
+\everyMPtoPDFconversion=\toks30
+)
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+./draw.tex:96: Missing \endcsname inserted.
+<to be read again> 
+                   \above 
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./draw.tex:96: Missing \endcsname inserted.
+<to be read again> 
+                   \above 
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./draw.tex:96: Missing $ inserted.
+<inserted text> 
+                $
+l.96 \heegaard{11}{3}{1}{5}
+                           
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 96.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 96.
+./draw.tex:96: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.96 \heegaard{11}{3}{1}{5}
+                           
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./draw.tex:96: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   =
+l.96 \heegaard{11}{3}{1}{5}
+                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./draw.tex:96: Extra \endcsname.
+\tikz@math@next ...ss@keyword@ \above =\endcsname 
+                                                  
+l.96 \heegaard{11}{3}{1}{5}
+                           
+I'm ignoring this, since I wasn't doing a \csname.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...scs = 3; \above = 1; \below 
+                                                  = 11 - 2*3 - 1; \shift = 5...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...elow = 11 - 2*3 - 1; \shift 
+                                                  = 5; \discmid 0 = \points ...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...3 - 1; \shift = 5; \discmid 
+                                                  0 = \points - \discs + 0.5...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...nts - \discs + 0.5 \discmid 
+                                                  1 = mod(\discs - \shift - ...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...mid 1 = mod(\discs - \shift 
+                                                  - 1, \points ) function dr...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...points ) function drawto(\x 
+                                                  , \side ) { if \side = 0 t...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ... function drawto(\x , \side 
+                                                  ) { if \side = 0 then { if...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...wto(\x , \side ) { if \side 
+                                                  = 0 then { if \x > \points...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...{ if \side = 0 then { if \x 
+                                                  > \points - 2*\discs then ...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...hen { return ({round(abs(\x 
+                                                  - \disks - 0.5))},\discmid...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...urn ({round(abs(\x - \disks 
+                                                  - 0.5))},\discmid 0); } el...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ... - \disks - 0.5))},\discmid 
+                                                  0); } else { if \x > \poin...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...\discmid 0); } else { if \x 
+                                                  > \points - 2*\disks - \ab...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ... if \x > \points - 2*\disks 
+                                                  - \above then { return (\m...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Missing number, treated as zero.
+<to be read again> 
+                   t
+l.96 \heegaard{11}{3}{1}{5}
+                           
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./draw.tex:96: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   t
+l.96 \heegaard{11}{3}{1}{5}
+                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...urn (\maxx ,{\maxy - \shift 
+                                                  - (\x - \below )}); } else...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...maxx ,{\maxy - \shift - (\x 
+                                                  - \below )}); } else { if ...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...axy - \shift - (\x - \below 
+                                                  )}); } else { if mod(\x - ...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...low )}); } else { if mod(\x 
+                                                  - \shift , \points ) > \x ...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...} else { if mod(\x - \shift 
+                                                  , \points ) > \x then { re...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...x - \shift , \points ) > \x 
+                                                  then { return (\x ,0); } e...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...ts ) > \x then { return (\x 
+                                                  ,0); } else { return (\max...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...} else { return (\maxx ,{\x 
+                                                  - \shift + 1}); }; }; }; }...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...return (\maxx ,{\x - \shift 
+                                                  + 1}); }; }; }; } else { i...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...}; }; }; } else { if mod(\x 
+                                                  + \shift , \points ) > \po...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...} else { if mod(\x + \shift 
+                                                  , \points ) > \points - 2*...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...turn ({\maxx - round(abs(\x 
+                                                  - \disks - 0.5))},\discmid...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...axx - round(abs(\x - \disks 
+                                                  - 0.5))},\discmid 1); } el...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ... - \disks - 0.5))},\discmid 
+                                                  1); } else { if \x > \poin...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...\discmid 1); } else { if \x 
+                                                  > \points - 2*\disks - \ab...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ... if \x > \points - 2*\disks 
+                                                  - \above then { return (\m...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Missing number, treated as zero.
+<to be read again> 
+                   t
+l.96 \heegaard{11}{3}{1}{5}
+                           
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./draw.tex:96: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   t
+l.96 \heegaard{11}{3}{1}{5}
+                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...urn (\maxx ,{\maxy - \shift 
+                                                  - (\x - \below )}); } else...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...maxx ,{\maxy - \shift - (\x 
+                                                  - \below )}); } else { if ...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...axy - \shift - (\x - \below 
+                                                  )}); } else { if mod(\x - ...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...low )}); } else { if mod(\x 
+                                                  - \shift , \points ) > \x ...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...} else { if mod(\x - \shift 
+                                                  , \points ) > \x then { re...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...x - \shift , \points ) > \x 
+                                                  then { return (\x ,0); } e...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...ts ) > \x then { return (\x 
+                                                  ,0); } else { return (\max...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...} else { return (\maxx ,{\x 
+                                                  - \shift + 1}); }; }; }; }...
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Undefined control sequence.
+\tikz@math@marshal ...return (\maxx ,{\x - \shift 
+                                                  + 1}); }; }; }; } \par }; 
+l.96 \heegaard{11}{3}{1}{5}
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./draw.tex:96: Missing $ inserted.
+<inserted text> 
+                $
+l.96 \heegaard{11}{3}{1}{5}
+                           
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./draw.tex:96: Missing } inserted.
+<inserted text> 
+                }
+l.96 \heegaard{11}{3}{1}{5}
+                           
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./draw.tex:96: Extra }, or forgotten \endgroup.
+\tikz@math@marshal ...ift + 1}); }; }; }; } \par }
+                                                  ; 
+l.96 \heegaard{11}{3}{1}{5}
+                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Missing character: There is no ; in font nullfont!
+Missing character: There is no @ in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (27.71214pt too wide) in paragraph at lines 96--97
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+[1
+
+{/gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf
+-dist/fonts/map/pdftex/updmap/pdftex.map}] (./draw.aux) ) 
+Here is how much of TeX's memory you used:
+ 12257 strings out of 478994
+ 265756 string characters out of 5833535
+ 527584 words of memory out of 5000000
+ 29566 multiletter control sequences out of 15000+600000
+ 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 113i,8n,116p,406b,681s stack positions out of 5000i,500n,10000p,200000b,80000s
+</gnu/store/830xpsp83h
+qh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi5.pfb></gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-t
+exmf-20210325/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></gnu/s
+tore/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></gnu/store/830xpsp83hqh1w8sv0yixdsggp3
+gaic9-texlive-texmf-20210325/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r5.pfb></gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf-20210325/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></gnu/store/830xpsp83hqh1w
+8sv0yixdsggp3gaic9-texlive-texmf-20210325/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy5.pfb></gnu/store/830xpsp83hqh1w8sv0yixdsggp3gaic9-texlive-texmf
+-20210325/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on draw.pdf (1 page, 66745 bytes).
+PDF statistics:
+ 39 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+
