@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  14 FEB 2023 13:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  14 FEB 2023 14:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -408,20 +408,20 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 ) (./draw.aux)
 \openout1 = `draw.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
 
 (/gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf
 -dist/tex/context/base/mkii/supp-pdf.mkii
@@ -448,27 +448,22 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 -dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-))
-Overfull \hbox (28.26775pt too wide) in paragraph at lines 110--111
- [] 
- []
-
-[1
+)) [1
 
 {/gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf
 -dist/fonts/map/pdftex/updmap/pdftex.map}] (./draw.aux) ) 
 Here is how much of TeX's memory you used:
- 12548 strings out of 478994
- 272087 string characters out of 5833535
- 533319 words of memory out of 5000000
- 29854 multiletter control sequences out of 15000+600000
+ 12529 strings out of 478994
+ 271638 string characters out of 5833535
+ 525874 words of memory out of 5000000
+ 29835 multiletter control sequences out of 15000+600000
  403430 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,6n,116p,406b,792s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,6n,116p,406b,764s stack positions out of 5000i,500n,10000p,200000b,80000s
 </gnu/store/8aakdan6lb
 wdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr10.pfb>
-Output written on draw.pdf (1 page, 14446 bytes).
+Output written on draw.pdf (1 page, 9941 bytes).
 PDF statistics:
  15 PDF objects out of 1000 (max. 8388607)
  10 compressed objects within 1 object stream

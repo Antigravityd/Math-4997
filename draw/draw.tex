@@ -4,12 +4,7 @@
 \usetikzlibrary{math}
 \usetikzlibrary{calc}
 
-\newcommand{\heegaard}[4]{ % arguments-to-math key: the four-tuple (p, a, b, r) is represented by (#1, #2, #3, #4)
-  \begin{tikzpicture}[
-    dot/.style = {circle, fill, minimum size=#1,
-      inner sep=0pt, outer sep=0pt},
-    dot/.default = 6pt
-    ]
+\newcommand{\diagram}[4]{ % arguments-to-math key: the four-tuple (p, a, b, r) is represented by (#1, #2, #3, #4)
     \tikzmath{ % everything else
       \points = #1;
       \maxy = \points + 1;
@@ -19,7 +14,7 @@
       \belo = \points - 2*\discs - \abov;
       \shift = #4 - 1;
       \discmidl = \maxy - \discs - 0.5;
-      \discmidr = \maxy - \abov - \discs - \shift - 0.5;
+      \discmidr = \maxy - mod(\abov + \discs + \shift, \points) - 0.5;
       % annoyingly, these functions don't seem to be able to output coordinates.
       % this is a fix: a function call that emulates a coordinate depending on an axis parameter
       function proj(\vala, \valb, \whaxis) {
@@ -52,32 +47,31 @@
         } else { % right side
           \preimage = mod(\n - \shift - 1, \points) + 1;
           \preerimage = mod(\preimage - \abov - 1, \points) + 1;
-          if \preimage <= \abov then {
+          if \preimage <= \abov then { % above arc
             \endpoint = 2*\discs + \preimage;
             return proj(0, \maxy - \endpoint, \axis);
           } else {
             if \preerimage <= 2*\discs then { % disc point
-              \endpoint = mod((2*\discs - \preimage + 1) + \shift - 1, \points) + \abov + \points + 1;
-              if \n < \preimage then { % warps
-                if \n < \endpoint then { % top warp
-                  return proj(\maxx - (\n - \points), \maxy, \axis);
-                } else { % bottom warp
-                  return proj(\maxx - \n, 0, \axis);
+              \endpoint = mod((2*\discs - \preerimage + 1) + \shift + \abov - 1, \points) + \points + 1;
+              if \preerimage <= \discs then { % top half
+                if \endpoint < \n then { % warps
+                  return proj(\n - \points - 1, 0, \axis);
+                } else { % no warp
+                  return proj(\maxx - abs(\preerimage - \discs - 0.5), \discmidr, \axis);
                 };
-              } else { % no warp
-                return proj(\maxx - abs(\preimage - \abov - \discs - 0.5), \discmidr, \axis);
-              };
-            } else {
-              if \preimage <= \abov then { % above arc
-                \endpoint = 2*\discs + \preimage;
-                return proj(0, \endpoint, \axis);
-              } else { % below arc
-                \endpoint = mod(\n - \shift - 1, \points) + 1;
-                if \n < \endpoint + \points then { % warps
+              } else { % bottom half
+                if \n < \endpoint then { % warps
                   return proj(\maxx - (\n - \points), \maxy, \axis);
                 } else { % no warp
-                  return proj(0, \maxy - \endpoint, \axis);
+                  return proj(\maxx - abs(\preerimage - \discs - 0.5), \discmidr, \axis);
                 };
+              };
+            } else { % below arc
+              \endpoint = mod(\n - \shift - 1, \points) + 1;
+              if \n < \endpoint + \points then { % warps
+                return proj(\maxx - (\n - \points), \maxy, \axis);
+              } else { % no warp
+                return proj(0, \maxy - \endpoint, \axis);
               };
             };
           };
@@ -94,8 +88,8 @@
         \otherrx = otherend(\i + \points, 0);
         \otherry = otherend(\i + \points, 1);
         {
-          \node[dot,label=left:\i] (c) at (\lx,\ly) {};
-          \node[dot,label=right:\i] (d) at (\rx,\ry) {};
+          \node[dot] (c) at (\lx,\ly) {};
+          \node[dot] (d) at (\rx,\ry) {};
           \draw (\lx,\ly) -- (\otherlx,\otherly);
           \draw (\rx,\ry) -- (\otherrx,\otherry);
         };
@@ -103,11 +97,23 @@
     }
     % bounding square
     \draw (0,0) rectangle (\maxx,\maxy);
-  \end{tikzpicture}
+
 }
+
+% TODO: number the vertices correctly in this command; the math library for loop makes it pick up a decmal point.
+% \newcommand\heegard[4]{
+%   \begin{tikzpicture}[dot/.style = {circle, fill, minimum size=#1, inner sep=0pt, outer sep=0pt}, dot/.default = 6pt]
+%     \diagram{#1}{#2}{#3}{#4}
+%     foreach \i in {1,...#1} {
+
+%     }
+%   \end{tikzpicture}
+% }
 \begin{document}
 \begin{center}
-  \heegaard{11}{2}{1}{5}
+  \begin{tikzpicture}[dot/.style = {circle, fill, minimum size=#1, inner sep=0pt, outer sep=0pt}, dot/.default = 6pt]
+    \diagram{11}{3}{1}{5}
+  \end{tikzpicture}
 \end{center}
 \end{document}
 % Test cases: [5, 1, 1, 2], [7, 2, 1, 3], [7, 3, 1, 5], and [11, 3, 1, 5]

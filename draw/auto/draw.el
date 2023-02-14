@@ -7,6 +7,6 @@
     "art10"
     "tikz")
    (TeX-add-symbols
-    '("heegaard" 4)))
+    '("diagram" 4)))
  :latex)
 
