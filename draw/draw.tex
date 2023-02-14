@@ -1,119 +1,141 @@
 \documentclass{article}
 
+\usepackage{graphicx}
 \usepackage{tikz}
-\usetikzlibrary{math}
-\usetikzlibrary{calc}
+\usetikzlibrary{math,calc}
+
 
 \newcommand{\diagram}[4]{ % arguments-to-math key: the four-tuple (p, a, b, r) is represented by (#1, #2, #3, #4)
-    \tikzmath{ % everything else
-      \points = #1;
-      \maxy = \points + 1;
-      \maxx = \points;
-      \discs = #2;
-      \abov = #3;
-      \belo = \points - 2*\discs - \abov;
-      \shift = #4 - 1;
-      \discmidl = \maxy - \discs - 0.5;
-      \discmidr = \maxy - mod(\abov + \discs + \shift, \points) - 0.5;
-      % annoyingly, these functions don't seem to be able to output coordinates.
-      % this is a fix: a function call that emulates a coordinate depending on an axis parameter
-      function proj(\vala, \valb, \whaxis) {
-        if \whaxis == 0 then {
-          return \vala;
-        } else {
-          return \valb;
-        };
+  \tikzmath{ % everything else
+    \points = #1;
+    \maxy = \points + 1;
+    \maxx = \points;
+    \discs = #2;
+    \abov = #3;
+    \belo = \points - 2*\discs - \abov;
+    \shift = #4 - 1;
+    \discmidl = \maxy - \discs - 0.5;
+    \discmidr = \maxy - mod(\abov + \discs + \shift, \points) - 0.5;
+    % annoyingly, these functions don't seem to be able to output coordinates.
+    % this is a fix: a function call that emulates a coordinate depending on an axis parameter
+    function proj(\vala, \valb, \whaxis) {
+      if \whaxis == 0 then {
+        return \vala;
+      } else {
+        return \valb;
       };
-      % given an input node number, return the number of the node it's connected to.
-      % first coordinate if axis = 0; second otherwise.
-      function otherend(\n, \axis) {
-        if \n <= \points then { % left side
-          if \n <= 2*\discs then { % disc point
-            \endpoint = 2 * \discs - \n + 1;
-            return proj(abs(\n - \discs - 0.5), \discmidl, \axis);
-          } else {
-            if \n <= \points - \belo then { % above arc
-              \endpoint = mod(\n + \points - 2*\discs + \shift - 1, \points) + 1;
+    };
+    % given an input node number, return the number of the node it's connected to.
+    % first coordinate if axis = 0; second otherwise.
+    function otherend(\n, \axis) {
+      if \n <= \points then { % left side
+        if \n <= 2*\discs then { % disc point
+          \endpoint = 2 * \discs - \n + 1;
+          return proj(abs(\n - \discs - 0.5), \discmidl, \axis);
+        } else {
+          if \n <= \points - \belo then { % above arc
+            \endpoint = mod(\n + \points - 2*\discs + \shift - 1, \points) + 1;
+            return proj(\maxx, \maxy - \endpoint, \axis);
+          } else { % below arc
+            \endpoint = mod(\n + \shift - 1, \points) + 1;
+            if \endpoint < \n then { % warps
+              return proj(\maxx - \n + 1, 0, \axis);
+            } else { % no warp
               return proj(\maxx, \maxy - \endpoint, \axis);
-            } else { % below arc
-              \endpoint = mod(\n + \shift - 1, \points) + 1;
-              if \endpoint < \n then { % warps
-                return proj(\maxx - \n + 1, 0, \axis);
-              } else { % no warp
-                return proj(\maxx, \maxy - \endpoint, \axis);
-              };
             };
           };
-        } else { % right side
-          \preimage = mod(\n - \shift - 1, \points) + 1;
-          \preerimage = mod(\preimage - \abov - 1, \points) + 1;
-          if \preimage <= \abov then { % above arc
-            \endpoint = 2*\discs + \preimage;
-            return proj(0, \maxy - \endpoint, \axis);
-          } else {
-            if \preerimage <= 2*\discs then { % disc point
-              \endpoint = mod((2*\discs - \preerimage + 1) + \shift + \abov - 1, \points) + \points + 1;
-              if \preerimage <= \discs then { % top half
-                if \endpoint < \n then { % warps
-                  return proj(\n - \points - 1, 0, \axis);
-                } else { % no warp
-                  return proj(\maxx - abs(\preerimage - \discs - 0.5), \discmidr, \axis);
-                };
-              } else { % bottom half
-                if \n < \endpoint then { % warps
-                  return proj(\maxx - (\n - \points), \maxy, \axis);
-                } else { % no warp
-                  return proj(\maxx - abs(\preerimage - \discs - 0.5), \discmidr, \axis);
-                };
+        };
+      } else { % right side
+        \preimage = mod(\n - \shift - 1, \points) + 1;
+        \preerimage = mod(\preimage - \abov - 1, \points) + 1;
+        if \preimage <= \abov then { % above arc
+          \endpoint = 2*\discs + \preimage;
+          return proj(0, \maxy - \endpoint, \axis);
+        } else {
+          if \preerimage <= 2*\discs then { % disc point
+            \endpoint = mod((2*\discs - \preerimage + 1) + \shift + \abov - 1, \points) + \points + 1;
+            if \preerimage <= \discs then { % top half
+              if \endpoint < \n then { % warps
+                return proj(\n - \points - 1, 0, \axis);
+              } else { % no warp
+                return proj(\maxx - abs(\preerimage - \discs - 0.5), \discmidr, \axis);
               };
-            } else { % below arc
-              \endpoint = mod(\n - \shift - 1, \points) + 1;
-              if \n < \endpoint + \points then { % warps
+            } else { % bottom half
+              if \n < \endpoint then { % warps
                 return proj(\maxx - (\n - \points), \maxy, \axis);
               } else { % no warp
-                return proj(0, \maxy - \endpoint, \axis);
+                return proj(\maxx - abs(\preerimage - \discs - 0.5), \discmidr, \axis);
               };
+            };
+          } else { % below arc
+            \endpoint = mod(\n - \shift - 1, \points) + 1;
+            if \n < \endpoint + \points then { % warps
+              return proj(\maxx - (\n - \points), \maxy, \axis);
+            } else { % no warp
+              return proj(0, \maxy - \endpoint, \axis);
             };
           };
         };
       };
-      % now actually draw it
-      for \i in {1,...,\points}{
-        \lx = 0;
-        \ly = \maxy - \i;
-        \rx = \maxx;
-        \ry = \maxy - \i;
-        \otherlx = otherend(\i, 0);
-        \otherly = otherend(\i, 1);
-        \otherrx = otherend(\i + \points, 0);
-        \otherry = otherend(\i + \points, 1);
-        {
-          \node[dot] (c) at (\lx,\ly) {};
-          \node[dot] (d) at (\rx,\ry) {};
-          \draw (\lx,\ly) -- (\otherlx,\otherly);
-          \draw (\rx,\ry) -- (\otherrx,\otherry);
-        };
+    };
+    % now actually draw it
+    for \i in {1,...,\points}{
+      \lx = 0;
+      \ly = \maxy - \i;
+      \rx = \maxx;
+      \ry = \maxy - \i;
+      \otherlx = otherend(\i, 0);
+      \otherly = otherend(\i, 1);
+      \otherrx = otherend(\i + \points, 0);
+      \otherry = otherend(\i + \points, 1);
+      {
+        \node[dot] (c) at (\lx,\ly) {};
+        \node[dot] (d) at (\rx,\ry) {};
+        \draw (\lx,\ly) -- (\otherlx,\otherly);
+        \draw (\rx,\ry) -- (\otherrx,\otherry);
       };
-    }
-    % bounding square
-    \draw (0,0) rectangle (\maxx,\maxy);
-
+    };
+  }
+  % bounding square
+  \draw (0,0) rectangle (\maxx,\maxy);
 }
 
-% TODO: number the vertices correctly in this command; the math library for loop makes it pick up a decmal point.
-% \newcommand\heegard[4]{
-%   \begin{tikzpicture}[dot/.style = {circle, fill, minimum size=#1, inner sep=0pt, outer sep=0pt}, dot/.default = 6pt]
-%     \diagram{#1}{#2}{#3}{#4}
-%     foreach \i in {1,...#1} {
+% Put the diagram in a tikzpicture and draw the node labels
+\newcommand{\heegaard}[4]{
+  \begin{tikzpicture}[dot/.style = {circle, fill, minimum size=6pt, inner sep=0pt, outer sep=0pt}, dot/.default = 6pt]
+    \diagram{#1}{#2}{#3}{#4}
+    \draw (0,0) node foreach \i in {1,...,#1} at (-0.5,#1-\i+1) {$\i$};
+    \draw (0,0) node foreach \i in {1,...,#1} at (#1+0.5,#1-\i+1) {$\i$};
+  \end{tikzpicture}
+}
 
-%     }
-%   \end{tikzpicture}
-% }
+% Given [p, a, b, r] and an x and a y, make an x-by-y grid of Heegaard diagrams.
+\newcommand{\ucover}[6]{
+  \tikzset{
+    tile/.pic={
+      \diagram{#1}{#2}{#3}{#4}
+    }
+  }
+  \begin{tikzpicture}[dot/.style = {circle, fill, minimum size=6pt, inner sep=0pt, outer sep=0pt}, dot/.default = 6pt]
+    \foreach \x in {1,...,#5}  {
+      \foreach \y in {1,...,#6} {
+        \tikzmath{
+          \xorig = (\x - 1) * #1;
+          \yorig = (\y - 1) * (#1 + 1);
+        }
+        \pic (S) at (\xorig,\yorig) {tile};
+      };
+    };
+  \end{tikzpicture}
+}
+
 \begin{document}
 \begin{center}
-  \begin{tikzpicture}[dot/.style = {circle, fill, minimum size=#1, inner sep=0pt, outer sep=0pt}, dot/.default = 6pt]
-    \diagram{11}{3}{1}{5}
-  \end{tikzpicture}
+
+  \scalebox{0.5}{
+    \ucover{11}{3}{1}{5}{2}{2}
+  }
+
 \end{center}
 \end{document}
 % Test cases: [5, 1, 1, 2], [7, 2, 1, 3], [7, 3, 1, 5], and [11, 3, 1, 5]
