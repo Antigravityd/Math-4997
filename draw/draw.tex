@@ -41,39 +41,43 @@
               \endpoint = mod(\n + \points - 2*\discs + \shift - 1, \points) + 1;
               return proj(\maxx, \maxy - \endpoint, \axis);
             } else { % below arc
-              \endpoint = mod(\n + \shift - 1, \points) + \points + 1;
-              if \endpoint - \points < \n then { % warps
+              \endpoint = mod(\n + \shift - 1, \points) + 1;
+              if \endpoint < \n then { % warps
                 return proj(\maxx - \n + 1, 0, \axis);
               } else { % no warp
-                return proj(\maxx, \maxy - \endpoint - \points, \axis);
+                return proj(\maxx, \maxy - \endpoint, \axis);
               };
             };
           };
         } else { % right side
           \preimage = mod(\n - \shift - 1, \points) + 1;
-          \preerimage = mod(\preimage - \abov - 1, \points) + 1; % TODO: the line just above the right discs
-          % is interpreted as a disc point incorrectly
-          if \preerimage <= 2*\discs then { % disc point
-            \endpoint = mod((2*\discs - \preimage + 1) + \shift, \points) + \abov + \points;
-            if \n < \preimage then { % warps
-              if \n < \endpoint then { % top warp
-                return proj(\maxx - (\n - \points), \maxy, \axis);
-              } else { % bottom warp
-                return proj(\maxx - \n, 0, \axis);
-              };
-            } else { % no warp
-              return proj(\maxx - abs(\preimage - \abov - \discs - 0.5), \discmidr, \axis);
-            };
+          \preerimage = mod(\preimage - \abov - 1, \points) + 1;
+          if \preimage <= \abov then {
+            \endpoint = 2*\discs + \preimage;
+            return proj(0, \maxy - \endpoint, \axis);
           } else {
-            if \preimage <= \abov then { % above arc
-              \endpoint = 2*\discs + \preimage;
-              return proj(0, \endpoint, \axis);
-            } else { % below arc
-              \endpoint = mod(\n - \shift - 1, \points) + 1;
-              if \n < \endpoint + \points then { % warps
-                return proj(\maxx - (\n - \points), \maxy, \axis);
+            if \preerimage <= 2*\discs then { % disc point
+              \endpoint = mod((2*\discs - \preimage + 1) + \shift - 1, \points) + \abov + \points + 1;
+              if \n < \preimage then { % warps
+                if \n < \endpoint then { % top warp
+                  return proj(\maxx - (\n - \points), \maxy, \axis);
+                } else { % bottom warp
+                  return proj(\maxx - \n, 0, \axis);
+                };
               } else { % no warp
+                return proj(\maxx - abs(\preimage - \abov - \discs - 0.5), \discmidr, \axis);
+              };
+            } else {
+              if \preimage <= \abov then { % above arc
+                \endpoint = 2*\discs + \preimage;
                 return proj(0, \endpoint, \axis);
+              } else { % below arc
+                \endpoint = mod(\n - \shift - 1, \points) + 1;
+                if \n < \endpoint + \points then { % warps
+                  return proj(\maxx - (\n - \points), \maxy, \axis);
+                } else { % no warp
+                  return proj(0, \maxy - \endpoint, \axis);
+                };
               };
             };
           };
@@ -103,7 +107,7 @@
 }
 \begin{document}
 \begin{center}
-  \heegaard{11}{3}{1}{5}
+  \heegaard{11}{2}{1}{5}
 \end{center}
 \end{document}
 % Test cases: [5, 1, 1, 2], [7, 2, 1, 3], [7, 3, 1, 5], and [11, 3, 1, 5]
