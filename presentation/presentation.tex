@@ -1,7 +1,25 @@
-\documentclass{article}
+\documentclass{beamer}
 
-\usepackage{graphicx}
+\usetheme{metropolis}
+
+
+\usepackage{tgpagella}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{tikz}
+\usepackage{minted}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\sisetup{detect-all}
+\newtheorem{plm}{Problem}
+
+\title{VIR Progress}
+\author{Duncan Wilkie}
+\date{3 March 2022}
+
 \usetikzlibrary{math,calc}
 
 
@@ -137,11 +155,74 @@
   \end{tikzpicture}
 }
 
+
 \begin{document}
-\begin{center}
-  \scalebox{0.45}{\heegaard{33}{1}{24}{1}}
-\end{center}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{What We're Doing, Again}
+    \begin{center}
+      \scalebox{0.63}{
+        \begin{tikzcd}[ampersand replacement=\&]
+          \textrm{Knot Floer homology} \arrow[d] \&  \textrm{of 1-1 knots} \arrow[d] \\
+          \textrm{Powerful, but hard-to-compute knot invariant} \arrow[d]
+          \&  \textrm{Class of knots one can compute it for} \arrow[d] \\
+          \widehat{HFK}(K) = \bigoplus_{i, s}HFK_{i}(K, s) \& \textrm{Can be split into two arcs, each ``simple'' on a torus}
+        \end{tikzcd}
+      }
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{What We're Doing, Again}
+  \begin{itemize}
+  \item 1-1 knots are represented by 4 integers $[p, a, b, r]$.
+  \item Can read off $\widehat{HFK}$ from diagram constructible from $[p, a, b, r]$
+  \end{itemize}
+  E.g. $[7, 3, 1, 5] \mapsto$
+  \begin{center}
+    \scalebox{0.7}{\heegaard{7}{3}{1}{5}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{What We've Done}
+  \begin{itemize}
+  \item Large jumps in grading---why?
+    \begin{itemize}
+    \item Looked for combinatorial predictors of jumps among $[p, a, b, r]$.
+    \item General methods for detecting combinatorial patterns: alien coding, inductive logic programming, symbolic regression,
+      syntax-guided synthesis, Berlekamp-Massey algorithm.
+    \item Dead end; $[p, a, b, r]$ is unlikely to hold much topological data.
+    \end{itemize}
+  \item Automatically drawing diagrams
+    \begin{itemize}
+    \item It's 2023; why use your hands?
+    \item \texttt{\\heegaard\{p\}\{a\}\{b\}\{r\},\\ucover\{p\}\{a\}\{b\}\{r\}} $\mapsto$ TikZ diagrams
+    \item Works in many cases
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Where We're Going}
+  \begin{itemize}
+  \item s/grading jumps/multiplicity of top grading/
+    \begin{itemize}
+    \item In $\bigoplus_{i, s}\widehat{HFK}_{i}(K, s)$, sometimes there is one topmost ``bin,'' and sometimes there are several
+    \item What does this say about the knot?
+    \item What does this say about the diagram?
+    \end{itemize}
+  \item Fix drawing bugs
+    \begin{itemize}
+    \item Sometimes algo is just wrong.
+    \item Make warped lines match up in universal cover, so one can see connected regions.
+    \end{itemize}
+  \end{itemize}
+
+  \qed
+\end{frame}
 \end{document}
-% Test cases: [5, 1, 1, 2], [7, 2, 1, 3], [7, 3, 1, 5], and [11, 3, 1, 5]
-% PARTIAL CORRECTNESS PROOF (no intersections)
-% Accept the following lemma from the (1-1) knots paper:

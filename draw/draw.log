@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  14 FEB 2023 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  27 FEB 2023 14:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -408,20 +408,20 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 ) (./draw.aux)
 \openout1 = `draw.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
 
 (/gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf
 -dist/tex/context/base/mkii/supp-pdf.mkii
@@ -449,25 +449,31 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
- [1
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 142.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 142.
+
+Overfull \hbox (100.82362pt too wide) in paragraph at lines 142--143
+ [] 
+ []
+
+[1
 
 {/gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf
 -dist/fonts/map/pdftex/updmap/pdftex.map}] (./draw.aux) ) 
 Here is how much of TeX's memory you used:
- 12545 strings out of 478994
- 271983 string characters out of 5833535
- 580613 words of memory out of 5000000
- 29851 multiletter control sequences out of 15000+600000
+ 12768 strings out of 478994
+ 276037 string characters out of 5833535
+ 580949 words of memory out of 5000000
+ 30074 multiletter control sequences out of 15000+600000
  403430 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,10n,89p,411b,1181s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,8n,89p,411b,814s stack positions out of 5000i,500n,10000p,200000b,80000s
 </gnu/store/8aakdan6lb
 wdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr10.pfb>
-Output written on draw.pdf (1 page, 13350 bytes).
+Output written on draw.pdf (1 page, 17207 bytes).
 PDF statistics:
  15 PDF objects out of 1000 (max. 8388607)
  10 compressed objects within 1 object stream
