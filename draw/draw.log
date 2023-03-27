@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  27 FEB 2023 14:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  22 MAR 2023 15:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -449,34 +449,82 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 142.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 142.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (100.82362pt too wide) in paragraph at lines 142--143
+Overfull \hbox (59.33841pt too wide) in paragraph at lines 142--150
+ [] 
+ []
+
+
+Overfull \hbox (59.33841pt too wide) in paragraph at lines 142--150
+ [] 
+ []
+
+
+Overfull \hbox (59.33841pt too wide) in paragraph at lines 142--150
+ [] 
+ []
+
+
+Overfull \hbox (59.33841pt too wide) in paragraph at lines 142--150
+ [] 
+ []
+
+
+Overfull \hbox (59.33841pt too wide) in paragraph at lines 142--150
+ [] 
+ []
+
+
+Overfull \hbox (173.14938pt too wide) in paragraph at lines 142--150
  [] 
  []
 
 [1
 
 {/gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf
--dist/fonts/map/pdftex/updmap/pdftex.map}] (./draw.aux) ) 
+-dist/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7]
+Overfull \vbox (19.45486pt too high) has occurred while \output is active []
+
+
+[8] (./draw.aux) ) 
 Here is how much of TeX's memory you used:
- 12768 strings out of 478994
- 276037 string characters out of 5833535
- 580949 words of memory out of 5000000
- 30074 multiletter control sequences out of 15000+600000
+ 12604 strings out of 478994
+ 273133 string characters out of 5833535
+ 804753 words of memory out of 5000000
+ 29910 multiletter control sequences out of 15000+600000
  403430 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,8n,89p,411b,814s stack positions out of 5000i,500n,10000p,200000b,80000s
-</gnu/store/8aakdan6lb
-wdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb>
-Output written on draw.pdf (1 page, 17207 bytes).
+ 87i,9n,89p,411b,1168s stack positions out of 5000i,500n,10000p,200000b,80000s
+</gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20
+210325/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on draw.pdf (8 pages, 37069 bytes).
 PDF statistics:
- 15 PDF objects out of 1000 (max. 8388607)
- 10 compressed objects within 1 object stream
+ 38 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
