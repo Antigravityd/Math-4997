@@ -2,7 +2,7 @@
 
 \usepackage{graphicx}
 \usepackage{tikz}
-\usetikzlibrary{math,calc}
+\usetikzlibrary{math}
 
 
 \newcommand{\diagram}[4]{ % arguments-to-math key: the four-tuple (p, a, b, r) is represented by (#1, #2, #3, #4)
@@ -16,8 +16,6 @@
     \shift = #4 - 1;
     \discmidl = \maxy - \discs - 0.5;
     \discmidr = \maxy - mod(\abov + \discs + \shift, \points) - 0.5;
-    % annoyingly, these functions don't seem to be able to output coordinates.
-    % this is a fix: a function call that emulates a coordinate depending on an axis parameter
     function proj(\vala, \valb, \whaxis) {
       if \whaxis == 0 then {
         return \vala;
@@ -25,83 +23,59 @@
         return \valb;
       };
     };
-    % given an input node number, return the number of the node it's connected to.
-    % first coordinate if axis = 0; second otherwise.
-    function otherend(\n, \axis) {
-      if \n <= \points then { % left side
-        if \n <= 2*\discs then { % disc point
-          \endpoint = 2 * \discs - \n + 1;
-          return proj(abs(\n - \discs - 0.5), \discmidl, \axis);
-        } else {
-          if \n <= \points - \belo then { % above arc
-            \endpoint = mod(\n + \points - 2*\discs + \shift - 1, \points) + 1;
-            if \endpoint < \n then { % warps
-              return proj(\maxx - \n + 1, 0, \axis);
-            } else {
-              return proj(\maxx, \maxy - \endpoint, \axis);
-            };
-          } else { % below arc
-            \endpoint = mod(\n + \shift - 1, \points) + 1;
-            if \endpoint < \n then { % warps
-              return proj(\maxx - \n + 1, 0, \axis);
-            } else { % no warp
-              return proj(\maxx, \maxy - \endpoint, \axis);
-            };
-          };
+    % We want to work as abstractly as possible, namely, with the Heegaard generator numberings.
+    % This function converts those generator numberings, along with which side one is on, to TikZ coordinates.
+    function ntoxy(\n, \side, \axis) {
+      if \side == 0 then {
+        return proj(0, \maxy - \n, \axis);
+      } else {
+        return proj(\maxx, \maxy - \n, \axis);
+      };
+    };
+    % given a point on the left side, return the endpoint number of the corresponding arc on the right side in the unshifted diagram.
+    function imagenoshift(\n) {
+      if \n <= 2 *\discs then { % disc point
+        return \abov + \n;
+      } else {
+        if \n <= \points - \belo then { % above arc
+          return \n - 2 * \discs;
+        } else { % below arc
+          return \n;
         };
-      } else { % right side
-        \preimage = mod(\n - \shift - 1, \points) + 1;
-        \preerimage = mod(\preimage - \abov - 1, \points) + 1;
-        if \preimage <= \abov then { % above arc
-          \endpoint = 2*\discs + \preimage;
-          if \n - \points < \endpoint then {
-            return proj(\maxx - (\n - \points), \maxy, \axis);
-          } else {
-            return proj(0, \maxy - \endpoint, \axis);
+      };
+    };
+    function drawleft(\n) {
+      \sx = ntoxy(\n, 0, 0);
+      \sy = ntoxy(\n, 0, 1);
+      if \n <= 2 * \discs then { % no warp possible
+        \ex = abs(\n - \discs - 0.5);
+        \ey = \discmidl;
+        {
+          \node[dot] (c) at (\sx,\sy) {};
+          \draw (\sx,\sy) -- (\ex,\ey);
+        };
+      } else {
+        \otheren = imagenoshift(\n) + \shift;
+        if \otheren > \points then { % warps
+          \ex = \warpstart + (\points - \n) * \warpstep;
+          \otherny = ntoxy(mod(\otheren - 1, \points) + 1, 1, 1);
+          {
+            \node[dot] (c) at (\sx,\sy) {};
+            \draw (\sx, \sy) -- (\ex,0);
+            \draw (\ex,\maxy) -- (\maxx,\otherny);
           };
         } else {
-          if \preerimage <= 2*\discs then { % disc point
-            \endpoint = mod((2*\discs - \preerimage + 1) + \shift + \abov - 1, \points) + \points + 1;
-            if \preerimage <= \discs then { % top half
-              if \endpoint < \n then { % warps
-                return proj(\n - \points - 1, 0, \axis);
-              } else { % no warp
-                return proj(\maxx - abs(\preerimage - \discs - 0.5), \discmidr, \axis);
-              };
-            } else { % bottom half
-              if \n < \endpoint then { % warps
-                return proj(\maxx - (\n - \points), \maxy, \axis);
-              } else { % no warp
-                return proj(\maxx - abs(\preerimage - \discs - 0.5), \discmidr, \axis);
-              };
-            };
-          } else { % below arc
-            \endpoint = mod(\n - \shift - 1, \points) + 1;
-            if \n < \endpoint + \points then { % warps
-              return proj(\maxx - (\n - \points), \maxy, \axis);
-            } else { % no warp
-              return proj(0, \maxy - \endpoint, \axis);
-            };
+          \otherny = ntoxy(mod(\otheren - 1, \points) + 1, 1, 1);
+          {
+            \node[dot] (c) at (\sx,\sy) {};
+            \draw (\sx,\sy) -- (\maxx,\otherny);
           };
         };
       };
     };
     % now actually draw it
     for \i in {1,...,\points}{
-      \lx = 0;
-      \ly = \maxy - \i;
-      \rx = \maxx;
-      \ry = \maxy - \i;
-      \otherlx = otherend(\i, 0);
-      \otherly = otherend(\i, 1);
-      \otherrx = otherend(\i + \points, 0);
-      \otherry = otherend(\i + \points, 1);
-      {
-        \node[dot] (c) at (\lx,\ly) {};
-        \node[dot] (d) at (\rx,\ry) {};
-        \draw (\lx,\ly) -- (\otherlx,\otherly);
-        \draw (\rx,\ry) -- (\otherrx,\otherry);
-      };
+      drawleft(\i);
     };
   }
   % bounding square
@@ -117,7 +91,7 @@
   \end{tikzpicture}
 }
 
-% Given [p, a, b, r] and an x and a y, make an x-by-y grid of Heegaard diagrams.
+% % Given [p, a, b, r] and an x and a y, make an x-by-y grid of Heegaard diagrams.
 \newcommand{\ucover}[6]{
   \tikzset{
     tile/.pic={
@@ -139,14 +113,9 @@
 
 \begin{document}
 \begin{center}
-  \ucover{5}{1}{2}{2}{2}{2}
-  \ucover{5}{1}{3}{1}{2}{2}
-  \ucover{7}{1}{0}{6}{2}{2}
-  \ucover{7}{1}{1}{5}{2}{2}
-  \ucover{7}{1}{3}{2}{2}{2}
-  \ucover{7}{1}{4}{6}{2}{2}
-  \ucover{7}{1}{5}{5}{2}{2}
-  \ucover{9}{1}{0}{8}{2}{2}
+  \begin{tikzpicture}
+    \heegaard{7}{1}{0}{5}
+  \end{tikzpicture}
 \end{center}
 \end{document}
 % Test cases: [5, 1, 1, 2], [7, 2, 1, 3], [7, 3, 1, 5], and [11, 3, 1, 5]
