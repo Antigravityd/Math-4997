@@ -46,32 +46,32 @@ The drawing of a single diagram is done via \verb|\diagram{p}{a}{b}{r}|; in the 
 Most of the logic is done using the TikZ-math extension, which permits basic integer and modular integer arithmetic.
 
 There is initial setup of some macro constants when the function is called:
-\inputminted[firstline=11, lastline=40]{tex}{../draw/draw.tex}
+\inputminted[firstline=11, lastline=41]{tex}{../draw/draw.tex}
 
 Then, we define some convenience functions to avoid shortcomings of the DSL:
-\inputminted[firstline=41, lastline=57]{tex}{../draw/draw.tex}
+\inputminted[firstline=42, lastline=61]{tex}{../draw/draw.tex}
 
 Now, we can get into some content.
 The following produces the right-hand points corresponding to a left-hand point before applying the \verb|\shift|;
 this helps by not needing to differentiate between above and below arcs in the drawing logic.
-\inputminted[firstline=58, lastline=69]{tex}{../draw/draw.tex}
+\inputminted[firstline=62, lastline=74]{tex}{../draw/draw.tex}
 
 Now, for the actual drawing.
 This function draws everything from the left side:
-\inputminted[firstline=70, lastline=98]{tex}{../draw/draw.tex}
+\inputminted[firstline=75, lastline=103]{tex}{../draw/draw.tex}
 
 And this one takes care of what that misses:
-\inputminted[firstline=99, lastline=135]{tex}{../draw/draw.tex}
+\inputminted[firstline=104, lastline=140]{tex}{../draw/draw.tex}
 
 With this set up, it's a simple matter of iterating over the points, calling these functions,
 and adding details.
-\inputminted[firstline=136, lastline=144]{tex}{../draw/draw.tex}
+\inputminted[firstline=141, lastline=149]{tex}{../draw/draw.tex}
 
 The actual user-facing code embellishes and combines these diagrams to produce high-quality substrates
 for contentual mathematical reasoning: the user is expected to use
-\inputminted[firstline=148, lastline=155]{text}{../draw/draw.tex}
+\inputminted[firstline=153, lastline=160]{text}{../draw/draw.tex}
 for standalone diagrams (which merely adds generator numberings) and
-\inputminted[firstline=157, lastline=175]{tex}{../draw/draw.tex}
+\inputminted[firstline=162, lastline=180]{tex}{../draw/draw.tex}
 for drawing rectangular subsets of the universal cover diagram.
 
 

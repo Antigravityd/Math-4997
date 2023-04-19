@@ -18,7 +18,8 @@
     \discmidl = \maxy - \discs - 0.5; % y-coordinate of midpoint of left-side rainbow arcs
     \discmidr = \maxy - mod(\abov + \discs + \shift, \points) - 0.5;
     % here-down: stuff related to the warping arcs
-    \innerdisctop = \abov + 1 + \shift; % un-wrapped n-value of the top (i.e. wrt. y-coordinate) of the innermost disc on the right
+    \innerdisctop = \abov + 1 + \shift; % un-wrapped n-value of the top (i.e. wrt. y-coordinate)
+                                        % of the innermost disc on the right
     if \innerdisctop > \points then { % there exist fully warped discs
       \warpdiscs = \discmidr - 0.5; % number of fully warped discs (need to check)
     } else {
@@ -38,7 +39,8 @@
       \warpstart = \maxx / 4;
       \warpend = 3 * \warpstart;
     };
-    % produce a coordinate given a pair and an axis (necessary because coordinates cannot be returned from functions)
+    % produce a coordinate given a pair and an axis
+    % (necessary because coordinates cannot be returned from functions)
     function proj(\vala, \valb, \whaxis) {
       if \whaxis == 0 then {
         return \vala;
@@ -46,8 +48,10 @@
         return \valb;
       };
     };
-    % We want to work as abstractly as possible, namely, with the Heegaard generator numberings.
-    % This function converts those generator numberings, along with which side one is on, to TikZ coordinates.
+    % We want to work as abstractly as possible, namely,
+    % with the Heegaard generator numberings.
+    % This function converts those generator numberings, along with which side one is on,
+    % to TikZ coordinates.
     function ntoxy(\n, \side, \axis) {
       if \side == 0 then {
         return proj(0, \maxy - \n, \axis);
@@ -55,7 +59,8 @@
         return proj(\maxx, \maxy - \n, \axis);
       };
     };
-    % given a point on the left side, return the endpoint number of the corresponding arc on the right side in the unshifted diagram.
+    % given a point on the left side, return the endpoint number
+    % of the corresponding arc on the right side in the unshifted diagram.
     function imagenoshift(\n) {
       if \n <= 2 *\discs then { % disc point
         return \abov + \n;
@@ -121,7 +126,7 @@
           \otherend = \n - \delta;
           if \otherend < 1 then { % warps
             {
-              \draw
+p              \draw
             };
           } else { % doesn't warp
             \ex = abs(\maxx - (\n - \discs - 0.5));

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  19 APR 2023 13:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  19 APR 2023 14:41
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -880,7 +880,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./_minted-thms/default-pyg-prefix.pygstyle)
 (./_minted-thms/default.pygstyle)
-(./_minted-thms/B88BD20B4273DE56CB22D73C056F14569D241E23517D1BDD12638DBE5196A79
+runsystem(pygmentize -l tex -f latex -P commandprefix=PYG -F tokenmerge -o _min
+ted-thms/8F21DF91D749EA325F6C74A2C050E8789D241E23517D1BDD12638DBE5196A799.pygte
+x ../draw/draw.tex)...executed.
+
+
+(./_minted-thms/8F21DF91D749EA325F6C74A2C050E8789D241E23517D1BDD12638DBE5196A79
 9.pygtex
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
@@ -970,15 +975,7 @@ LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 21.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 21.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 21.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 22.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
@@ -990,11 +987,15 @@ LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 23.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 24.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 23.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 24.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 25.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
@@ -1010,27 +1011,19 @@ LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 27.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 29.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 27.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 29.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 27.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 29.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 28.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 28.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 28.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 29.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
@@ -1046,15 +1039,7 @@ LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 31.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 32.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 32.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 33.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
@@ -1070,7 +1055,11 @@ LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 36.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 35.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 35.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
@@ -1086,47 +1075,757 @@ LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 37.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 39.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 38.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 39.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 38.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 39.
 
-) [2] (./thms.aux) ) 
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 40.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 40.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 41.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 41.
+
+)
+(./_minted-thms/8F21DF91D749EA325F6C74A2C050E8789D241E23517D1BDD12638DBE5196A79
+9.pygtex
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 45.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 45.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 45.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 46.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 47.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 49.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 56.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 56.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 56.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 57.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 58.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 58.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 58.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 60.
+
+)
+(./_minted-thms/8F21DF91D749EA325F6C74A2C050E8789D241E23517D1BDD12638DBE5196A79
+9.pygtex
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 65.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 66.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 66.
+
+[2]
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 67.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 67.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 69.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 69.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 69.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 70.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 70.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 72.
+
+)
+(./_minted-thms/8F21DF91D749EA325F6C74A2C050E8789D241E23517D1BDD12638DBE5196A79
+9.pygtex
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 76.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 77.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 77.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 78.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 78.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 79.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 79.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 80.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 80.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 80.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 81.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 81.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 83.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 83.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 83.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 84.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 84.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 84.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 84.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 84.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 87.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 87.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 87.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 88.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 88.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 89.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 89.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 89.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 89.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 89.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 90.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 90.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 90.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 92.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 92.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 92.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 93.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 93.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 93.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 93.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 94.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 94.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 94.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 94.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 94.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 97.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 97.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 97.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 99.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 99.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 99.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 100.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 100.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 100.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 100.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 100.
+
+)
+(./_minted-thms/8F21DF91D749EA325F6C74A2C050E8789D241E23517D1BDD12638DBE5196A79
+9.pygtex
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 105.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 106.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 106.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 106.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 106.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 107.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 107.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 107.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 107.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 108.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 108.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 109.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 109.
+
+[3]
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 110.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 110.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 111.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 111.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 111.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 112.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 112.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 113.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 113.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 113.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 114.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 114.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 115.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 115.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 117.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 117.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 117.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 120.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 120.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 120.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 120.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 121.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 121.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 123.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 123.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 123.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 123.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 123.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 127.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 127.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 127.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 128.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 130.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 133.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 133.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 133.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 133.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 134.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 134.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 136.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 136.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 136.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 136.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 136.
+
+)
+(./_minted-thms/8F21DF91D749EA325F6C74A2C050E8789D241E23517D1BDD12638DBE5196A79
+9.pygtex
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 143.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 143.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 144.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 149.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 149.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 149.
+
+[4])
+runsystem(pygmentize -l text -f latex -P commandprefix=PYG -F tokenmerge -o _mi
+nted-thms/8F21DF91D749EA325F6C74A2C050E8788B17C69F7EFCFC547E55FC1145E3AEC1.pygt
+ex ../draw/draw.tex)...executed.
+
+
+(./_minted-thms/8F21DF91D749EA325F6C74A2C050E8788B17C69F7EFCFC547E55FC1145E3AEC
+1.pygtex)
+(./_minted-thms/8F21DF91D749EA325F6C74A2C050E8789D241E23517D1BDD12638DBE5196A79
+9.pygtex
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 164.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 164.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 165.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 167.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 170.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 171.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 171.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 172.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 172.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 173.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 174.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 174.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 175.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 175.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 177.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 177.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 177.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/b/n' undefined
+(Font)              using `OT1/cmtt/bx/n' instead on input line 180.
+
+)
+runsystem(rm _minted-thms/141CFDB07A7CBA7916A059AB5D7C09B59D241E23517D1BDD12638
+DBE5196A799.pygtex)...executed.
+
+runsystem(rm _minted-thms/141CFDB07A7CBA7916A059AB5D7C09B58B17C69F7EFCFC547E55F
+C1145E3AEC1.pygtex)...executed.
+
+ [5] (./thms.aux) ) 
 Here is how much of TeX's memory you used:
- 19934 strings out of 478994
- 424020 string characters out of 5833535
- 715922 words of memory out of 5000000
- 37038 multiletter control sequences out of 15000+600000
+ 19959 strings out of 478994
+ 425843 string characters out of 5833535
+ 720122 words of memory out of 5000000
+ 37046 multiletter control sequences out of 15000+600000
  432965 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,6n,116p,404b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-
-20210325/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}</gnu/store/8aakdan
+{/gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-2
+0210325/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}</gnu/store/8aakdan6
+lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmitt10.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texli
+ve-texmf-20210325/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4
+613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr7.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></gnu/store/8aakdan
 6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmitt10.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texl
-ive-texmf-20210325/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></gnu/store/8aakdan6lbwdw0l0axkzy
-4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr7.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-2021032
-5/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></gnu/store/8aakda
-n6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmtt10.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texl
-ive-texmf-20210325/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/t
-exmf-dist/fonts/type1/public/tex-gyre/qplb.pfb></gnu/store/8aakdan6lbwdw0l0axkz
-y4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/type1/public/tex-gyr
-e/qplr.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/
-share/texmf-dist/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on thms.pdf (2 pages, 200324 bytes).
+ublic/amsfonts/cm/cmtt10.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texli
+ve-texmf-20210325/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/te
+xmf-dist/fonts/type1/public/tex-gyre/qplb.pfb></gnu/store/8aakdan6lbwdw0l0axkzy
+4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/type1/public/tex-gyre
+/qplr.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/s
+hare/texmf-dist/fonts/type1/public/tex-gyre/qplri.pfb>
+Output written on thms.pdf (5 pages, 210713 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
