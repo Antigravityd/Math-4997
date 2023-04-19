@@ -1,0 +1,96 @@
+\documentclass{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{tgpagella}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{minted}
+\usepackage{physics}
+\usepackage{siunitx}
+
+\sisetup{detect-all}
+\newtheorem{prop}{Proposition}
+
+\title{VIR Results}
+\author{Duncan Wilkie et. al.}
+\date{1 April 2023}
+
+\begin{document}
+
+\maketitle
+
+The project concerns the Floer homology of 1-1 knots.
+Knots of this type can be drawn on a torus, and represented via a 4-tuple $[p, a, b, r]$,
+from which the knot can be drawn on the torus (as a quotient of $\mathbb{R}^{2}$) in a Heegaard diagram.
+Computing the homology from this diagram is very easy---precisely the reason for the study of this topic.
+
+\section{Drawing}
+
+Code is being written which takes as input the 4-tuple and draws the Heegaard diagram in TikZ.
+The correctness of this code depends firstly on the correctness of the underlying tooling,
+which we shall not verify,
+but also on several semantic propositions about relationships between sides of the diagrams.
+
+Those we may formulate mathematically, and attempt to prove.
+
+The code concerns in large part the relationship between the generators and a coordinate system in TikZ.
+Given a Heegaard diagram drawn on a square, this coordinate system is imposed as follows:
+the vertical or $y$ axis lies along the left side of the diagram, and the horizontal or $x$ axis
+lies along the very bottom of the diagram.
+The scale for the axes is such that the top of the square diagram is the line $y = p+1$,
+and the point corresponding to the $k$th generator on the left side lies at $y = p + 1 - k$.
+
+The drawing of a single diagram is done via \verb|\diagram{p}{a}{b}{r}|; in the macro body, these arguments become \verb|#1, #2, #3, #4|.
+Most of the logic is done using the TikZ-math extension, which permits basic integer and modular integer arithmetic.
+
+There is initial setup of some macro constants when the function is called:
+\inputminted[firstline=11, lastline=40]{tex}{../draw/draw.tex}
+
+Then, we define some convenience functions to avoid shortcomings of the DSL:
+\inputminted[firstline=41, lastline=57]{tex}{../draw/draw.tex}
+
+Now, we can get into some content.
+The following produces the right-hand points corresponding to a left-hand point before applying the \verb|\shift|;
+this helps by not needing to differentiate between above and below arcs in the drawing logic.
+\inputminted[firstline=58, lastline=69]{tex}{../draw/draw.tex}
+
+Now, for the actual drawing.
+This function draws everything from the left side:
+\inputminted[firstline=70, lastline=98]{tex}{../draw/draw.tex}
+
+And this one takes care of what that misses:
+\inputminted[firstline=99, lastline=135]{tex}{../draw/draw.tex}
+
+With this set up, it's a simple matter of iterating over the points, calling these functions,
+and adding details.
+\inputminted[firstline=136, lastline=144]{tex}{../draw/draw.tex}
+
+The actual user-facing code embellishes and combines these diagrams to produce high-quality substrates
+for contentual mathematical reasoning: the user is expected to use
+\inputminted[firstline=148, lastline=155]{text}{../draw/draw.tex}
+for standalone diagrams (which merely adds generator numberings) and
+\inputminted[firstline=157, lastline=175]{tex}{../draw/draw.tex}
+for drawing rectangular subsets of the universal cover diagram.
+
+
+\begin{prop}
+  The following tikzmath function converts a generator number, a side number, and an axis number
+  to the corresponding coordinate of the generator in the above-described system.
+  The side number is either 0, corresponding to a left-side generator, or 1,
+  corresponding to a right-side generator.
+  The axis number is either 0, corresponding to the horizontal coordinate, or 1,
+  corresponding to the vertical coordinate.
+\end{prop}
+
+\begin{prop}
+  The following tikzmath function converts a generator number on the left side to
+\end{prop}
+
+\begin{prop}
+  The
+\end{prop}
+
+
+\end{document}

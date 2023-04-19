@@ -5,8 +5,9 @@
 \usetikzlibrary{math}
 
 
-\newcommand{\diagram}[4]{ % arguments-to-math key: the four-tuple (p, a, b, r) is represented by (#1, #2, #3, #4)
-  \tikzmath{ % everything else
+\newcommand{\diagram}[4]{ % arguments-to-math key: the four-tuple (p, a, b, r)
+                          % is represented by (#1, #2, #3, #4)
+  \tikzmath{
     \points = #1;
     \maxy = \points + 1;
     \maxx = \points;
@@ -14,8 +15,30 @@
     \abov = #3;
     \belo = \points - 2*\discs - \abov;
     \shift = #4 - 1;
-    \discmidl = \maxy - \discs - 0.5;
+    \discmidl = \maxy - \discs - 0.5; % y-coordinate of midpoint of left-side rainbow arcs
     \discmidr = \maxy - mod(\abov + \discs + \shift, \points) - 0.5;
+    % here-down: stuff related to the warping arcs
+    \innerdisctop = \abov + 1 + \shift; % un-wrapped n-value of the top (i.e. wrt. y-coordinate) of the innermost disc on the right
+    if \innerdisctop > \points then { % there exist fully warped discs
+      \warpdiscs = \discmidr - 0.5; % number of fully warped discs (need to check)
+    } else {
+      \warpdiscs = 0;
+    };
+    \innerdiscbot = mod(\innerdisctop + 2 * \discs - 1, \points) + 1;
+    \innerdisctop = mod(\innerdisctop - 1, \points) + 1;
+    % there are precisely \shift - 2 * \warpdiscs warping arcs
+    % use this to calculate parameters needed to make the warps line up
+    \warpcnt = \shift - 2 * \warpdiscs;
+    if \warpcnt == 1 then {
+      \warpstart = \maxx / 2;
+      \warpend = \maxy / 2;
+      \warpstep = 0;
+    } else {
+      \warpstep = (\maxx / 2) / (\warpcnt - 1);
+      \warpstart = \maxx / 4;
+      \warpend = 3 * \warpstart;
+    };
+    % produce a coordinate given a pair and an axis (necessary because coordinates cannot be returned from functions)
     function proj(\vala, \valb, \whaxis) {
       if \whaxis == 0 then {
         return \vala;
@@ -47,14 +70,14 @@
     function drawleft(\n) {
       \sx = ntoxy(\n, 0, 0);
       \sy = ntoxy(\n, 0, 1);
-      if \n <= 2 * \discs then { % no warp possible
+      if \n <= 2 * \discs then { % disc point; no warp possible
         \ex = abs(\n - \discs - 0.5);
         \ey = \discmidl;
         {
           \node[dot] (c) at (\sx,\sy) {};
           \draw (\sx,\sy) -- (\ex,\ey);
         };
-      } else {
+      } else { % arc goes to right side; warp possible
         \otheren = imagenoshift(\n) + \shift;
         if \otheren > \points then { % warps
           \ex = \warpstart + (\points - \n) * \warpstep;
@@ -73,13 +96,53 @@
         };
       };
     };
+    function drawright(\n) {
+      \preimage = mod(\n - \shift - 1, \points) + 1;
+      \preerimage = mod(\preimage - \above - 1, \points) + 1;
+      \sx = ntoxy(\n, 1, 0);
+      \sy = ntoxy(\n, 1, 1);
+      if \preerimage <= 2 * \discs then { % disc point
+        \delta = 2 * (abs(\preerimage - \discmidl) - 0.5) + 1;
+        if \preerimage <= \discs then { % upper half
+          \otherend = \n + \delta;
+          if \otherend > \points then { % warps
+            \ex = \warpstart + ()
+            {
+              \draw (\sx,\sy) --
+            };
+          } else { % doesn't warp
+            \ex = abs(\maxx - (\n - \discs - 0.5));
+            \ey = \discmidr;
+            {
+              \draw (\sx,\sy) -- (\ex,\ey);
+            };
+          };
+        } else { % lower half
+          \otherend = \n - \delta;
+          if \otherend < 1 then { % warps
+            {
+              \draw
+            };
+          } else { % doesn't warp
+            \ex = abs(\maxx - (\n - \discs - 0.5));
+            \ey = \discmidr;
+            {
+              \draw (\sx,\sy) -- (\ex,\ey);
+            };
+          };
+        };
+      };
+    };
     % now actually draw it
     for \i in {1,...,\points}{
       drawleft(\i);
+      % drawright(\i);
+    };
+    {
+      % bounding square
+      \draw (0,0) rectangle (\maxx,\maxy);
     };
   }
-  % bounding square
-  \draw (0,0) rectangle (\maxx,\maxy);
 }
 
 % Put the diagram in a tikzpicture and draw the node labels
@@ -114,7 +177,7 @@
 \begin{document}
 \begin{center}
   \begin{tikzpicture}
-    \heegaard{7}{1}{0}{5}
+    \ucover{7}{2}{1}{3}{2}{2}
   \end{tikzpicture}
 \end{center}
 \end{document}

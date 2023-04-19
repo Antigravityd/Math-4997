@@ -1,0 +1,183 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}graphicx\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}tikz\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usetikzlibrary}\PYG{n+nb}{\PYGZob{}}math\PYG{n+nb}{\PYGZcb{}}
+
+
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}diagram}\PYG{n+nb}{\PYGZcb{}}[4]\PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} arguments\PYGZhy{}to\PYGZhy{}math key: the four\PYGZhy{}tuple (p, a, b, r)}
+                          \PYG{c}{\PYGZpc{} is represented by (\PYGZsh{}1, \PYGZsh{}2, \PYGZsh{}3, \PYGZsh{}4)}
+  \PYG{k}{\PYGZbs{}tikzmath}\PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} everything else}
+    \PYG{k}{\PYGZbs{}points} = \PYGZsh{}1;
+    \PYG{k}{\PYGZbs{}maxy} = \PYG{k}{\PYGZbs{}points} + 1;
+    \PYG{k}{\PYGZbs{}maxx} = \PYG{k}{\PYGZbs{}points};
+    \PYG{k}{\PYGZbs{}discs} = \PYGZsh{}2;
+    \PYG{k}{\PYGZbs{}abov} = \PYGZsh{}3;
+    \PYG{k}{\PYGZbs{}belo} = \PYG{k}{\PYGZbs{}points} \PYGZhy{} 2*\PYG{k}{\PYGZbs{}discs} \PYGZhy{} \PYG{k}{\PYGZbs{}abov};
+    \PYG{k}{\PYGZbs{}shift} = \PYGZsh{}4 \PYGZhy{} 1;
+    \PYG{k}{\PYGZbs{}discmidl} = \PYG{k}{\PYGZbs{}maxy} \PYGZhy{} \PYG{k}{\PYGZbs{}discs} \PYGZhy{} 0.5;
+    \PYG{k}{\PYGZbs{}discmidr} = \PYG{k}{\PYGZbs{}maxy} \PYGZhy{} mod(\PYG{k}{\PYGZbs{}abov} + \PYG{k}{\PYGZbs{}discs} + \PYG{k}{\PYGZbs{}shift}, \PYG{k}{\PYGZbs{}points}) \PYGZhy{} 0.5;
+    \PYG{k}{\PYGZbs{}innerdisctop} = \PYG{k}{\PYGZbs{}abov} + 1 + \PYG{k}{\PYGZbs{}shift};
+    if \PYG{k}{\PYGZbs{}innerdisctop} \PYGZgt{} \PYG{k}{\PYGZbs{}points} then \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} there exist fully warped discs}
+      \PYG{k}{\PYGZbs{}warpdiscs} = \PYG{k}{\PYGZbs{}discmidr} \PYGZhy{} 0.5; \PYG{c}{\PYGZpc{} number of fully warped discs}
+    \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}}
+      \PYG{k}{\PYGZbs{}warpdiscs} = 0;
+    \PYG{n+nb}{\PYGZcb{}};
+    \PYG{k}{\PYGZbs{}innerdiscbot} = mod(\PYG{k}{\PYGZbs{}innerdisctop} + 2 * \PYG{k}{\PYGZbs{}discs} \PYGZhy{} 1, \PYG{k}{\PYGZbs{}points}) + 1;
+    \PYG{k}{\PYGZbs{}innerdisctop} = mod(\PYG{k}{\PYGZbs{}innerdisctop} \PYGZhy{} 1, \PYG{k}{\PYGZbs{}points}) + 1;
+    \PYG{c}{\PYGZpc{} there are precisely \PYGZbs{}shift \PYGZhy{} 2 * \PYGZbs{}warpdiscs warping arcs}
+    \PYG{k}{\PYGZbs{}warpcnt} = \PYG{k}{\PYGZbs{}shift} \PYGZhy{} 2 * \PYG{k}{\PYGZbs{}warpdiscs};
+    if \PYG{k}{\PYGZbs{}warpcnt} == 1 then \PYG{n+nb}{\PYGZob{}}
+      \PYG{k}{\PYGZbs{}warpstart} = \PYG{k}{\PYGZbs{}maxx} / 2;
+      \PYG{k}{\PYGZbs{}warpend} = \PYG{k}{\PYGZbs{}maxy} / 2;
+      \PYG{k}{\PYGZbs{}warpstep} = 0;
+    \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}}
+      \PYG{k}{\PYGZbs{}warpstep} = (\PYG{k}{\PYGZbs{}maxx} / 2) / (\PYG{k}{\PYGZbs{}warpcnt} \PYGZhy{} 1);
+      \PYG{k}{\PYGZbs{}warpstart} = \PYG{k}{\PYGZbs{}maxx} / 4;
+      \PYG{k}{\PYGZbs{}warpend} = 3 * \PYG{k}{\PYGZbs{}warpstart};
+    \PYG{n+nb}{\PYGZcb{}};
+    function proj(\PYG{k}{\PYGZbs{}vala}, \PYG{k}{\PYGZbs{}valb}, \PYG{k}{\PYGZbs{}whaxis}) \PYG{n+nb}{\PYGZob{}}
+      if \PYG{k}{\PYGZbs{}whaxis} == 0 then \PYG{n+nb}{\PYGZob{}}
+        return \PYG{k}{\PYGZbs{}vala};
+      \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}}
+        return \PYG{k}{\PYGZbs{}valb};
+      \PYG{n+nb}{\PYGZcb{}};
+    \PYG{n+nb}{\PYGZcb{}};
+    \PYG{c}{\PYGZpc{} We want to work as abstractly as possible, namely, with the Heegaard generator numberings.}
+    \PYG{c}{\PYGZpc{} This function converts those generator numberings, along with which side one is on, to TikZ coordinates.}
+    function ntoxy(\PYG{k}{\PYGZbs{}n}, \PYG{k}{\PYGZbs{}side}, \PYG{k}{\PYGZbs{}axis}) \PYG{n+nb}{\PYGZob{}}
+      if \PYG{k}{\PYGZbs{}side} == 0 then \PYG{n+nb}{\PYGZob{}}
+        return proj(0, \PYG{k}{\PYGZbs{}maxy} \PYGZhy{} \PYG{k}{\PYGZbs{}n}, \PYG{k}{\PYGZbs{}axis});
+      \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}}
+        return proj(\PYG{k}{\PYGZbs{}maxx}, \PYG{k}{\PYGZbs{}maxy} \PYGZhy{} \PYG{k}{\PYGZbs{}n}, \PYG{k}{\PYGZbs{}axis});
+      \PYG{n+nb}{\PYGZcb{}};
+    \PYG{n+nb}{\PYGZcb{}};
+    \PYG{c}{\PYGZpc{} given a point on the left side, return the endpoint number of the corresponding arc on the right side in the unshifted diagram.}
+    function imagenoshift(\PYG{k}{\PYGZbs{}n}) \PYG{n+nb}{\PYGZob{}}
+      if \PYG{k}{\PYGZbs{}n} \PYGZlt{}= 2 *\PYG{k}{\PYGZbs{}discs} then \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} disc point}
+        return \PYG{k}{\PYGZbs{}abov} + \PYG{k}{\PYGZbs{}n};
+      \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}}
+        if \PYG{k}{\PYGZbs{}n} \PYGZlt{}= \PYG{k}{\PYGZbs{}points} \PYGZhy{} \PYG{k}{\PYGZbs{}belo} then \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} above arc}
+          return \PYG{k}{\PYGZbs{}n} \PYGZhy{} 2 * \PYG{k}{\PYGZbs{}discs};
+        \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} below arc}
+          return \PYG{k}{\PYGZbs{}n};
+        \PYG{n+nb}{\PYGZcb{}};
+      \PYG{n+nb}{\PYGZcb{}};
+    \PYG{n+nb}{\PYGZcb{}};
+    function drawleft(\PYG{k}{\PYGZbs{}n}) \PYG{n+nb}{\PYGZob{}}
+      \PYG{k}{\PYGZbs{}sx} = ntoxy(\PYG{k}{\PYGZbs{}n}, 0, 0);
+      \PYG{k}{\PYGZbs{}sy} = ntoxy(\PYG{k}{\PYGZbs{}n}, 0, 1);
+      if \PYG{k}{\PYGZbs{}n} \PYGZlt{}= 2 * \PYG{k}{\PYGZbs{}discs} then \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} no warp possible}
+        \PYG{k}{\PYGZbs{}ex} = abs(\PYG{k}{\PYGZbs{}n} \PYGZhy{} \PYG{k}{\PYGZbs{}discs} \PYGZhy{} 0.5);
+        \PYG{k}{\PYGZbs{}ey} = \PYG{k}{\PYGZbs{}discmidl};
+        \PYG{n+nb}{\PYGZob{}}
+          \PYG{k}{\PYGZbs{}node}\PYG{n+na}{[dot]} (c) at (\PYG{k}{\PYGZbs{}sx},\PYG{k}{\PYGZbs{}sy}) \PYG{n+nb}{\PYGZob{}\PYGZcb{}};
+          \PYG{k}{\PYGZbs{}draw} (\PYG{k}{\PYGZbs{}sx},\PYG{k}{\PYGZbs{}sy}) \PYGZhy{}\PYGZhy{} (\PYG{k}{\PYGZbs{}ex},\PYG{k}{\PYGZbs{}ey});
+        \PYG{n+nb}{\PYGZcb{}};
+      \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}}
+        \PYG{k}{\PYGZbs{}otheren} = imagenoshift(\PYG{k}{\PYGZbs{}n}) + \PYG{k}{\PYGZbs{}shift};
+        if \PYG{k}{\PYGZbs{}otheren} \PYGZgt{} \PYG{k}{\PYGZbs{}points} then \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} warps}
+          \PYG{k}{\PYGZbs{}ex} = \PYG{k}{\PYGZbs{}warpstart} + (\PYG{k}{\PYGZbs{}points} \PYGZhy{} \PYG{k}{\PYGZbs{}n}) * \PYG{k}{\PYGZbs{}warpstep};
+          \PYG{k}{\PYGZbs{}otherny} = ntoxy(mod(\PYG{k}{\PYGZbs{}otheren} \PYGZhy{} 1, \PYG{k}{\PYGZbs{}points}) + 1, 1, 1);
+          \PYG{n+nb}{\PYGZob{}}
+            \PYG{k}{\PYGZbs{}node}\PYG{n+na}{[dot]} (c) at (\PYG{k}{\PYGZbs{}sx},\PYG{k}{\PYGZbs{}sy}) \PYG{n+nb}{\PYGZob{}\PYGZcb{}};
+            \PYG{k}{\PYGZbs{}draw} (\PYG{k}{\PYGZbs{}sx}, \PYG{k}{\PYGZbs{}sy}) \PYGZhy{}\PYGZhy{} (\PYG{k}{\PYGZbs{}ex},0);
+            \PYG{k}{\PYGZbs{}draw} (\PYG{k}{\PYGZbs{}ex},\PYG{k}{\PYGZbs{}maxy}) \PYGZhy{}\PYGZhy{} (\PYG{k}{\PYGZbs{}maxx},\PYG{k}{\PYGZbs{}otherny});
+          \PYG{n+nb}{\PYGZcb{}};
+        \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}}
+          \PYG{k}{\PYGZbs{}otherny} = ntoxy(mod(\PYG{k}{\PYGZbs{}otheren} \PYGZhy{} 1, \PYG{k}{\PYGZbs{}points}) + 1, 1, 1);
+          \PYG{n+nb}{\PYGZob{}}
+            \PYG{k}{\PYGZbs{}node}\PYG{n+na}{[dot]} (c) at (\PYG{k}{\PYGZbs{}sx},\PYG{k}{\PYGZbs{}sy}) \PYG{n+nb}{\PYGZob{}\PYGZcb{}};
+            \PYG{k}{\PYGZbs{}draw} (\PYG{k}{\PYGZbs{}sx},\PYG{k}{\PYGZbs{}sy}) \PYGZhy{}\PYGZhy{} (\PYG{k}{\PYGZbs{}maxx},\PYG{k}{\PYGZbs{}otherny});
+          \PYG{n+nb}{\PYGZcb{}};
+        \PYG{n+nb}{\PYGZcb{}};
+      \PYG{n+nb}{\PYGZcb{}};
+    \PYG{n+nb}{\PYGZcb{}};
+    function drawright(\PYG{k}{\PYGZbs{}n}) \PYG{n+nb}{\PYGZob{}}
+      \PYG{k}{\PYGZbs{}preimage} = mod(\PYG{k}{\PYGZbs{}n} \PYGZhy{} \PYG{k}{\PYGZbs{}shift} \PYGZhy{} 1, \PYG{k}{\PYGZbs{}points}) + 1;
+      \PYG{k}{\PYGZbs{}preerimage} = mod(\PYG{k}{\PYGZbs{}preimage} \PYGZhy{} \PYG{k}{\PYGZbs{}above} \PYGZhy{} 1, \PYG{k}{\PYGZbs{}points}) + 1;
+      \PYG{k}{\PYGZbs{}sx} = ntoxy(\PYG{k}{\PYGZbs{}n}, 1, 0);
+      \PYG{k}{\PYGZbs{}sy} = ntoxy(\PYG{k}{\PYGZbs{}n}, 1, 1);
+      if \PYG{k}{\PYGZbs{}preerimage} \PYGZlt{}= 2 * \PYG{k}{\PYGZbs{}discs} then \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} disc point}
+        \PYG{k}{\PYGZbs{}delta} = 2 * (abs(\PYG{k}{\PYGZbs{}preerimage} \PYGZhy{} \PYG{k}{\PYGZbs{}discmidl}) \PYGZhy{} 0.5) + 1;
+        if \PYG{k}{\PYGZbs{}preerimage} \PYGZlt{}= \PYG{k}{\PYGZbs{}discs} then \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} upper half}
+          \PYG{k}{\PYGZbs{}otherend} = \PYG{k}{\PYGZbs{}n} + \PYG{k}{\PYGZbs{}delta};
+          if \PYG{k}{\PYGZbs{}otherend} \PYGZgt{} \PYG{k}{\PYGZbs{}points} then \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} warps}
+            \PYG{k}{\PYGZbs{}ex} = \PYG{k}{\PYGZbs{}warpstart} + ()
+            \PYG{n+nb}{\PYGZob{}}
+              \PYG{k}{\PYGZbs{}draw} (\PYG{k}{\PYGZbs{}sx},\PYG{k}{\PYGZbs{}sy}) \PYGZhy{}\PYGZhy{}
+            \PYG{n+nb}{\PYGZcb{}};
+          \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} doesn\PYGZsq{}t warp}
+            \PYG{k}{\PYGZbs{}ex} = abs(\PYG{k}{\PYGZbs{}maxx} \PYGZhy{} (\PYG{k}{\PYGZbs{}n} \PYGZhy{} \PYG{k}{\PYGZbs{}discs} \PYGZhy{} 0.5));
+            \PYG{k}{\PYGZbs{}ey} = \PYG{k}{\PYGZbs{}discmidr};
+            \PYG{n+nb}{\PYGZob{}}
+              \PYG{k}{\PYGZbs{}draw} (\PYG{k}{\PYGZbs{}sx},\PYG{k}{\PYGZbs{}sy}) \PYGZhy{}\PYGZhy{} (\PYG{k}{\PYGZbs{}ex},\PYG{k}{\PYGZbs{}ey});
+            \PYG{n+nb}{\PYGZcb{}};
+          \PYG{n+nb}{\PYGZcb{}};
+        \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} lower half}
+          \PYG{k}{\PYGZbs{}otherend} = \PYG{k}{\PYGZbs{}n} \PYGZhy{} \PYG{k}{\PYGZbs{}delta};
+          if \PYG{k}{\PYGZbs{}otherend} \PYGZlt{} 1 then \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} warps}
+            \PYG{n+nb}{\PYGZob{}}
+              \PYG{k}{\PYGZbs{}draw}
+            \PYG{n+nb}{\PYGZcb{}};
+          \PYG{n+nb}{\PYGZcb{}} else \PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} doesn\PYGZsq{}t warp}
+            \PYG{k}{\PYGZbs{}ex} = abs(\PYG{k}{\PYGZbs{}maxx} \PYGZhy{} (\PYG{k}{\PYGZbs{}n} \PYGZhy{} \PYG{k}{\PYGZbs{}discs} \PYGZhy{} 0.5));
+            \PYG{k}{\PYGZbs{}ey} = \PYG{k}{\PYGZbs{}discmidr};
+            \PYG{n+nb}{\PYGZob{}}
+              \PYG{k}{\PYGZbs{}draw} (\PYG{k}{\PYGZbs{}sx},\PYG{k}{\PYGZbs{}sy}) \PYGZhy{}\PYGZhy{} (\PYG{k}{\PYGZbs{}ex},\PYG{k}{\PYGZbs{}ey});
+            \PYG{n+nb}{\PYGZcb{}};
+          \PYG{n+nb}{\PYGZcb{}};
+        \PYG{n+nb}{\PYGZcb{}};
+      \PYG{n+nb}{\PYGZcb{}};
+    \PYG{n+nb}{\PYGZcb{}};
+
+    \PYG{c}{\PYGZpc{} now actually draw it}
+    for \PYG{k}{\PYGZbs{}i} in \PYG{n+nb}{\PYGZob{}}1,...,\PYG{k}{\PYGZbs{}points}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+      drawleft(\PYG{k}{\PYGZbs{}i});
+    \PYG{n+nb}{\PYGZcb{}};
+  \PYG{n+nb}{\PYGZcb{}}
+  \PYG{c}{\PYGZpc{} bounding square}
+  \PYG{k}{\PYGZbs{}draw} (0,0) rectangle (\PYG{k}{\PYGZbs{}maxx},\PYG{k}{\PYGZbs{}maxy});
+\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{c}{\PYGZpc{} Put the diagram in a tikzpicture and draw the node labels}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}heegaard}\PYG{n+nb}{\PYGZcb{}}[4]\PYG{n+nb}{\PYGZob{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}[dot/.style = \PYG{n+nb}{\PYGZob{}}circle, fill, minimum size=6pt, inner sep=0pt, outer sep=0pt\PYG{n+nb}{\PYGZcb{}}, dot/.default = 6pt]
+    \PYG{k}{\PYGZbs{}diagram}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYGZsh{}2\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYGZsh{}3\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYGZsh{}4\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}draw} (0,0) node foreach \PYG{k}{\PYGZbs{}i} in \PYG{n+nb}{\PYGZob{}}1,...,\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}} at (\PYGZhy{}0.5,\PYGZsh{}1\PYGZhy{}\PYG{k}{\PYGZbs{}i}+1) \PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}i}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}};
+    \PYG{k}{\PYGZbs{}draw} (0,0) node foreach \PYG{k}{\PYGZbs{}i} in \PYG{n+nb}{\PYGZob{}}1,...,\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}} at (\PYGZsh{}1+0.5,\PYGZsh{}1\PYGZhy{}\PYG{k}{\PYGZbs{}i}+1) \PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}i}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}};
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{c}{\PYGZpc{} \PYGZpc{} Given [p, a, b, r] and an x and a y, make an x\PYGZhy{}by\PYGZhy{}y grid of Heegaard diagrams.}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}ucover}\PYG{n+nb}{\PYGZcb{}}[6]\PYG{n+nb}{\PYGZob{}}
+  \PYG{k}{\PYGZbs{}tikzset}\PYG{n+nb}{\PYGZob{}}
+    tile/.pic=\PYG{n+nb}{\PYGZob{}}
+      \PYG{k}{\PYGZbs{}diagram}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYGZsh{}2\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYGZsh{}3\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYGZsh{}4\PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}[dot/.style = \PYG{n+nb}{\PYGZob{}}circle, fill, minimum size=6pt, inner sep=0pt, outer sep=0pt\PYG{n+nb}{\PYGZcb{}}, dot/.default = 6pt]
+    \PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}x} in \PYG{n+nb}{\PYGZob{}}1,...,\PYGZsh{}5\PYG{n+nb}{\PYGZcb{}}  \PYG{n+nb}{\PYGZob{}}
+      \PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}y} in \PYG{n+nb}{\PYGZob{}}1,...,\PYGZsh{}6\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZob{}}
+        \PYG{k}{\PYGZbs{}tikzmath}\PYG{n+nb}{\PYGZob{}}
+          \PYG{k}{\PYGZbs{}xorig} = (\PYG{k}{\PYGZbs{}x} \PYGZhy{} 1) * \PYGZsh{}1;
+          \PYG{k}{\PYGZbs{}yorig} = (\PYG{k}{\PYGZbs{}y} \PYGZhy{} 1) * (\PYGZsh{}1 + 1);
+        \PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}pic} (S) at (\PYG{k}{\PYGZbs{}xorig},\PYG{k}{\PYGZbs{}yorig}) \PYG{n+nb}{\PYGZob{}}tile\PYG{n+nb}{\PYGZcb{}};
+      \PYG{n+nb}{\PYGZcb{}};
+    \PYG{n+nb}{\PYGZcb{}};
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}ucover}\PYG{n+nb}{\PYGZob{}}7\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}}3\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\PYG{c}{\PYGZpc{} Test cases: [5, 1, 1, 2], [7, 2, 1, 3], [7, 3, 1, 5], and [11, 3, 1, 5]}
+\PYG{c}{\PYGZpc{} PARTIAL CORRECTNESS PROOF (no intersections)}
+\PYG{c}{\PYGZpc{} Accept the following lemma from the (1\PYGZhy{}1) knots paper:}
+\end{Verbatim}
