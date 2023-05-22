@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  19 APR 2023 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/GNU Guix) (preloaded format=pdflatex 2022.5.9)  19 APR 2023 18:49
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -461,22 +461,28 @@ Overfull \hbox (78.72339pt too wide) in paragraph at lines 196--197
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [2] (./draw.aux) ) 
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (132.47026pt too wide) in paragraph at lines 201--202
+ [] 
+ []
+
+[2] (./draw.aux) ) 
 Here is how much of TeX's memory you used:
  12740 strings out of 478994
  275746 string characters out of 5833535
- 613875 words of memory out of 5000000
+ 665351 words of memory out of 5000000
  30048 multiletter control sequences out of 15000+600000
  403598 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,10n,89p,406b,1328s stack positions out of 5000i,500n,10000p,200000b,80000s
-</gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-2
-0210325/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></gnu/store/
-8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq
--texlive-texmf-20210325/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
-pfb>
-Output written on draw.pdf (2 pages, 44428 bytes).
+</gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20
+210325/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></gnu/store/8
+aakdan6lbwdw0l0axkzy4613k4wibbq-texlive-texmf-20210325/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></gnu/store/8aakdan6lbwdw0l0axkzy4613k4wibbq-
+texlive-texmf-20210325/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb>
+Output written on draw.pdf (2 pages, 46870 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  18 compressed objects within 1 object stream
